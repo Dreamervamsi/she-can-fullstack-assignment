@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import { UserModel } from '../models/User';
+import { UserModel } from '../models/User.js';
 
 const JWT_SECRET = process.env.JWT_SECRET || '882ebf2b08b381bfa0feefb66b876266221d8ec4d6bcaf3119aa671519a24c02';
 const JWT_EXPIRES_IN = '1h';
