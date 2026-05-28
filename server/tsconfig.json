@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "compilerOptions": {
       "target": "ES2022",
       "module": "nodenext",
@@ -24,28 +23,3 @@
     "exclude": ["../dist", "node_modules"]
   }
   
-=======
-  "compilerOptions": {
-    "target": "ES2022",
-    "module": "ES2022",
-    "moduleResolution": "node",
-    "lib": ["ES2022","DOM"],
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "outDir": "../dist",
-    "rootDir": ".",
-    "isolatedModules": true,
-    "types": ["node"]
-  },
-  "include": ["**/*"],
-  "exclude": ["../dist", "node_modules"]
-}
->>>>>>> c5060776235a727c2917c6b28fbe05b13fd6324e
