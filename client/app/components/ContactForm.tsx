@@ -3,11 +3,9 @@
 import { FormEvent, useState } from "react";
 import axios from 'axios';
 
-<<<<<<< HEAD
-=======
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "";
-
->>>>>>> c5060776235a727c2917c6b28fbe05b13fd6324e
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  "https://she-can-fullstack-assignment.onrender.com";
 interface FormData {
   name: string;
   email: string;
@@ -83,10 +81,9 @@ export default function ContactForm() {
     setIsLoading(true);
 
     try {
-        const API_URI = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3001'
-        const res = await axios.post(`${API_URI}/api/contact/create`,formData);
-        console.log('Form submitted successfully:', res.data);
-        
+      const res = await axios.post(`${API_BASE_URL}/api/contact/create`, formData);
+      console.log('Form submitted successfully:', res.data);
+
       setIsSubmitted(true);
       setFormData({ name: "", email: "", message: "" });
 

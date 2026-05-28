@@ -4,7 +4,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "";
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  "https://she-can-fullstack-assignment.onrender.com";
 
 interface User {
   id: string;
@@ -110,7 +112,9 @@ export default function AdminPage() {
     setError(null);
 
     try {
-      await axios.delete(`/api/contact/${id}`, { headers: authHeaders });
+      await axios.delete(`${API_BASE_URL}/api/contact/${id}`, {
+        headers: authHeaders,
+      });
       setContacts((prev) => prev.filter((contact) => contact._id !== id));
     } catch (err: any) {
       setError(

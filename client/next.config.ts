@@ -1,14 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    async rewrites() {
-        return [
-          {
-            source: '/api/:path*',
-            destination: 'http://localhost:3001/api/:path*',
-          },
-        ];
-      },
+  // Keep API calls explicit via NEXT_PUBLIC_API_BASE_URL.
+  // A localhost rewrite breaks production deployments.
 };
 
 export default nextConfig;
