@@ -27,7 +27,7 @@ Create `server/.env` with:
 - **PORT**: API port (default `3001`)
 - **JWT_SECRET**: secret used to sign JWTs
 - **ADMIN_EMAIL**: seeded admin email (optional)
-- **ADMIN_PASSWORD**: seeded admin password (optional)
+- **ADMIN_PASSWORD**: seeded admin password (This field is optional)
 
 Note: on successful DB connection, the server runs `ensureAdminUser()` to create the admin user if it doesn’t already exist (`server/src/config/seedAdmin.ts`).
 
