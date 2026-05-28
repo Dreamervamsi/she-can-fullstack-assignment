@@ -1,5 +1,9 @@
 import { Request, Response } from 'express';
+<<<<<<< HEAD
 import { ContactModel } from '../models/Conatact.js';
+=======
+import { ContactModel } from '../models/Contact.js';
+>>>>>>> c5060776235a727c2917c6b28fbe05b13fd6324e
 
 export const createContact = async (
   req: Request,
@@ -11,6 +15,10 @@ export const createContact = async (
     if (!name || !email || !message) {
       return res.status(400).json({ error: 'All fields are required' });
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c5060776235a727c2917c6b28fbe05b13fd6324e
     const contact = await ContactModel.create({ name, email, message });
     return res.status(201).json(contact);
   } catch (error: any) {

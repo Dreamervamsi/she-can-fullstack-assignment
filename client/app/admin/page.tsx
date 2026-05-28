@@ -243,9 +243,15 @@ export default function AdminPage() {
                     <p className="text-sm text-slate-500">No registered users found.</p>
                   ) : (
                     <div className="space-y-3">
+<<<<<<< HEAD
                       {users.map((user,idx) => (
                         <div
                           key={idx}
+=======
+                      {users.map((user) => (
+                        <div
+                          key={user.id}
+>>>>>>> c5060776235a727c2917c6b28fbe05b13fd6324e
                           className="rounded-3xl bg-slate-50 p-4"
                         >
                           <p className="font-semibold text-slate-900">{user.name}</p>
