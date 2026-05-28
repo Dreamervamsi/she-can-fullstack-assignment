@@ -2,9 +2,9 @@ import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
 import cors from 'cors';
-import { contactRouter } from './routes/ContactRoute';
-import { authRouter } from './routes/AuthRoute';
-import { userRouter } from './routes/UserRoute';
+import { contactRouter } from './routes/ContactRoute.js';
+import { authRouter } from './routes/AuthRoute.js';
+import { userRouter } from './routes/UserRoute.js';
 
 export const app = express();
 

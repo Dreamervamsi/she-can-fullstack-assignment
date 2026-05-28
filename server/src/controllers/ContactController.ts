@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { ContactModel } from '../models/Contact';
+import { ContactModel } from '../models/Contact.js';
 
 export const createContact = async (
   req: Request,

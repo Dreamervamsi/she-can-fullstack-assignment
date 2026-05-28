@@ -1,9 +1,9 @@
-import { createContact, getContacts, deleteContact } from '../controllers/ContactController';
+import { createContact, getContacts, deleteContact } from '../controllers/ContactController.js';
 import { Router } from 'express';
-import { requireAuth, requireAdmin } from '../middlewares/authMiddleware';
+import { requireAuth, requireAdmin } from '../middlewares/authMiddleware.js';
 
 export const contactRouter = Router();
 
-contactRouter.post('/', createContact);
-contactRouter.get('/', requireAuth, requireAdmin, getContacts);
-contactRouter.delete('/:id', requireAuth, requireAdmin, deleteContact);
+contactRouter.post('/api/contact', createContact);
+contactRouter.get('/api/contact', requireAuth, requireAdmin, getContacts);
+contactRouter.delete('/api/contact/:id', requireAuth, requireAdmin, deleteContact);

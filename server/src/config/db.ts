@@ -1,8 +1,7 @@
 import mongoose from 'mongoose';
-import { ensureAdminUser } from './seedAdmin';
+import { ensureAdminUser } from './seedAdmin.js';
 
 const dbURI =
-  process.env.MONGO_URI ||
   process.env.DBURI ||
   'mongodb://localhost:27017/she-can-fullstack-assignment';
 

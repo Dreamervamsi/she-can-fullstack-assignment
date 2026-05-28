@@ -1,4 +1,5 @@
 import ContactForm from "./components/ContactForm";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,8 +14,16 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Contact Form */}
         <ContactForm />
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/admin"
+            className="inline-flex items-center justify-center rounded-full bg-purple-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-purple-700"
+          >
+            Go to Admin Panel
+          </Link>
+        </div>
       </div>
     </main>
   );

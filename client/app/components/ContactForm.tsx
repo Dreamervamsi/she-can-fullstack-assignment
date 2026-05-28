@@ -3,6 +3,8 @@
 import { FormEvent, useState } from "react";
 import axios from 'axios';
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "";
+
 interface FormData {
   name: string;
   email: string;
@@ -78,7 +80,7 @@ export default function ContactForm() {
     setIsLoading(true);
 
     try {
-        const res = await axios.post('/api/contact',formData);
+        const res = await axios.post(`${API_BASE_URL}/api/contact`, formData);
         console.log('Form submitted successfully:', res.data);
         
       setIsSubmitted(true);
