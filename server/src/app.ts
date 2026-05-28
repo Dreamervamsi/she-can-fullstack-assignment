@@ -4,6 +4,7 @@ import express from 'express';
 import cors from 'cors';
 import { contactRouter } from './routes/ContactRoute';
 import { authRouter } from './routes/AuthRoute';
+import { userRouter } from './routes/UserRoute';
 
 export const app = express();
 
@@ -13,4 +14,5 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/contact', contactRouter);
 app.use('/api/auth', authRouter);
+app.use('/api/users', userRouter);
 
