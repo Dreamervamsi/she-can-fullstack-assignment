@@ -83,12 +83,8 @@ export default function ContactForm() {
     setIsLoading(true);
 
     try {
-<<<<<<< HEAD
         const API_URI = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:3001'
         const res = await axios.post(`${API_URI}/api/contact/create`,formData);
-=======
-        const res = await axios.post(`${API_BASE_URL}/api/contact`, formData);
->>>>>>> c5060776235a727c2917c6b28fbe05b13fd6324e
         console.log('Form submitted successfully:', res.data);
         
       setIsSubmitted(true);

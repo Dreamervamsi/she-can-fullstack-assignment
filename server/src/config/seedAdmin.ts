@@ -1,9 +1,5 @@
 import bcrypt from 'bcryptjs';
-<<<<<<< HEAD
 import { UserModel } from '../models/User.js';
-=======
-import { UserModel } from '../models/User';
->>>>>>> c5060776235a727c2917c6b28fbe05b13fd6324e
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@shecan.foundation';
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'Admin123!';
