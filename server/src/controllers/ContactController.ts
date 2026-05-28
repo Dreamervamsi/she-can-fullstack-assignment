@@ -20,7 +20,7 @@ export const createContact = async (
   }
 };
 export const getContacts = async (
-  req: Request,
+  _req: Request,
   res: Response
 ): Promise<Response> => {
   try {

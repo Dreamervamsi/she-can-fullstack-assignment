@@ -1,8 +1,16 @@
 import mongoose from 'mongoose';
+import { ensureAdminUser } from './seedAdmin';
 
-const dbURI = process.env.DBURI || 'mongodb://localhost:27017/she-can-fullstack-assignment';
+const dbURI =
+  process.env.MONGO_URI ||
+  process.env.DBURI ||
+  'mongodb://localhost:27017/she-can-fullstack-assignment';
 
-mongoose.connect(dbURI)
-    .then(() => console.log('Connected to MongoDB'))
-    .catch((error) => console.error('Error connecting to MongoDB:', error));
+mongoose
+  .connect(dbURI)
+  .then(async () => {
+    console.log('Connected to MongoDB');
+    await ensureAdminUser();
+  })
+  .catch((error) => console.error('Error connecting to MongoDB:', error));
 
