@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const dbURI = "mongodb+srv://kvamsinellore_db_user:dU67HcXxp9biv7sK@cluster0.tlp4j9e.mongodb.net/?appName=Cluster0"
+const dbURI = process.env.DBURI || 'mongodb://localhost:27017/she-can-fullstack-assignment';
 
 mongoose.connect(dbURI)
     .then(() => console.log('Connected to MongoDB'))

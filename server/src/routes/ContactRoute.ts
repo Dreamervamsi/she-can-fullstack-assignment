@@ -1,6 +1,8 @@
-import {createContact} from '../controllers/ContactController';
-import Router from 'express';
+import { createContact, getContacts } from '../controllers/ContactController';
+import { Router } from 'express';
+import { requireAuth, requireAdmin } from '../middlewares/authMiddleware';
 
 export const contactRouter = Router();
 
-contactRouter.post('/api/contact', createContact);
+contactRouter.post('/', createContact);
+contactRouter.get('/', requireAuth, requireAdmin, getContacts);
